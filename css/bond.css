@@ -1,0 +1,204 @@
+:root{
+    --dark : #19283f;
+    --green: #33d1cc;
+    --red: #ff3150;
+    --yeullo:#ffc400;
+    --section-color:#eff7fa;
+
+}   
+body{
+    .roboto-thin {
+        font-family: "Roboto", sans-serif;
+        font-weight: 100;
+        font-style: normal;
+      }
+      
+      .roboto-light {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .roboto-regular {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .roboto-medium {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+}
+.main-btn {
+  background-color: var(--red) !important; 
+  color: var(--yeullo) !important;
+  padding: 0.5rem 1rem !important;
+}
+.main-btn:hover {
+  color: black !important;
+}
+.main-title::after{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--green);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* start nav*/
+.navbar {
+  background-color: var(--dark);
+}
+.navbar .navbar-nav .nav-link{
+  color: white;
+}
+.navbar .navbar-nav .nav-link.active {
+  color: var(--green);
+}
+.navbar .navbar-nav .nav-link:hover{
+  color: var(--green);
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green);
+}
+.navbar .search svg {
+  color: var(--green);
+}
+.navbar .navbar-toggler {
+  color: white;
+  font-size: 25px;
+  border-color: white;
+}
+.navbar .navbar-toggler:focus{
+  box-shadow: none;
+}
+/* end nav  */
+/* start landing  */
+.landing {
+  background-color: var(--dark);
+  min-height: calc(100vh - 72px);
+}
+/* end landing  */
+/* start features */
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+.features .icon-holder .icon {
+  color: var(--green);
+  font-size: 4rem;
+}
+/* end features  */
+/* start our work  */
+.our{
+  background-color: var(--section-color);
+}
+.our ul .active {
+  background-color: var(--red);
+}
+.our ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our ul li:not(:first-child):hover {
+  color: var(--red);
+}
+.our .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our .box::before{
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  background-color: #33d1cc9c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.3s;
+  transform: translateX(calc(-100% - 5px));
+}
+.our .box:hover::before{
+  transform: translateX(0%);
+}
+/* end our work  */
+/* start stuuf  */
+.stuuf .description {
+  max-width: 500px;
+}
+/* end stuuf  */
+/* start our team  */
+.team{
+  background-color: var(--section-color);
+}
+.team .box  h4 {
+  background-color: var(--green);
+}
+.project {
+  background-color: var(--dark);
+}
+/* end our team  */
+/* start sub  */
+.sub {
+  background-color: var(--yeullo);
+}
+.sub input[type="text"]{
+  border: none;
+  border-bottom: 1px solid white;
+}
+.sub input[type="text"]:focus{
+  outline: none;
+}
+.sub ::placeholder{
+  color: white;
+}
+.sub input[type="submit"]{
+  background-color: var(--dark);
+}
+@media(max-width:767px){
+  .sub input[type="submit"]{
+    margin-top: 50px;
+  }
+}
+/* end sub  */
+/* start footer */
+.footer {
+  background-color: var(--dark);
+}
+.footer .copyright > span {
+  color: var(--green);
+}
+.footer .Contact ul svg {
+  width: 20px;
+  height: 20px;
+}
+.footer .facebook {
+  background-color: #1877f2;
+}
+.footer .twitter {
+  background-color: #1da1f2;
+}
+.footer .linkedin {
+  background-color: #0a66c2;
+}
+.footer .youtube {
+  background-color: #ff0000;
+}
+/* end footer */
